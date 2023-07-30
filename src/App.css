@@ -1,0 +1,55 @@
+.outcard {
+  padding: 25px;
+  margin-left: 22%;
+  width: 50%;
+  
+  border-radius: 5px;
+  border: 3px solid blueviolet;
+
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 8px 16px rgba(182, 104, 104, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.outcard:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
+}
+
+.card {
+  box-shadow: 0 1px 2px 1px #ddd;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+}
+
+.inputs {
+  width: 93%;
+  color: #444;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px 10px;
+}
+
+.btns {
+  background-color: #0050b1;
+  color: #fff;
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.btns:active {
+  transform: translateY(2px);
+}
+
+.center {
+  text-align: center;
+}
+
+.logo img{
+  height: 10rem;
+  width: 10rem;
+}
