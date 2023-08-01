@@ -10,6 +10,7 @@ import Signin from './components/Signin';
 import Home from './components/Home';
 import ForgetPassword from './components/ForgetPassword';
 import NewSubmit from './components/NewSubmit';
+import PaymentSuccess from './components/Payment/PaymentSuccess'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/forget-pass" element={<ForgetPassword />} />
           <Route path="/otp" element={<NewSubmit />} />
+          <Route path="/paymentsuccess" element={<PaymentSuccess/>} />
         </Routes>
       </Router>
     </div>

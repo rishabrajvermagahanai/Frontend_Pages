@@ -10,32 +10,26 @@ function Signin() {
   const [password, setPassword] = useState("");
 
   const handleSubmit = () => {
-    console.log(email, password);
     axios
       .post("http://localhost:5000/signin", {
         email: email,
         password: password,
       })
       .then((res) => {
-        console.log(res.data);
+        //console.log(res.data);
 
         if (res.data.code === 500) {
           alert("User Not Found");
-          setEmail("");
-          setPassword("");
         }
         if (res.data.code === 404) {
           alert("Password is wrong");
-          setEmail("");
-          setPassword("");
         }
         if (res.data.code === 200) {
           // move to home
           navigate("/");
           localStorage.setItem("TOKEN", res.data.token);
           localStorage.setItem("EMAIL", res.data.email);
-          setEmail("");
-          setPassword("");
+
         }
       })
       .catch((err) => {

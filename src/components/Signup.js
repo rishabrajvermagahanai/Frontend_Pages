@@ -9,7 +9,6 @@ function Signup() {
   const [password, setPassword] = useState("");
 
   const handleSubmit = () => {
-    console.log(email, password);
     axios
       .post("http://localhost:5000/signup", {
         email: email,

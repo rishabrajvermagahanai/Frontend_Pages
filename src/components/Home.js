@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Payment from "./Payment/Payment";
 import img from "./image/logo_nobackground.png";
 import "../App.css";
+import axios from "axios";
 
 function Home() {
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ function Home() {
           </button>
         </div>
       </div>
-      <Payment amount={3500} />
+      <Payment amount={35000} />
     </>
   );
 }
