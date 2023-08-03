@@ -15,14 +15,6 @@
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
 }
 
-.card {
-  box-shadow: 0 1px 2px 1px #ddd;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #eee;
-}
-
 .inputs {
   width: 93%;
   color: #444;
@@ -45,11 +37,32 @@
   transform: translateY(2px);
 }
 
-.center {
-  text-align: center;
+.logo,.center{
+  display: flex;
+  justify-content: center;
+}
+.card-home{
+  background-color: rgb(220,220,220);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.logout>span{
+  color: rgb(166, 5, 5);
 }
 
-.logo img{
-  height: 10rem;
-  width: 10rem;
+
+@media (max-width: 767px) {
+  .card {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+

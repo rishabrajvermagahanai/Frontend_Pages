@@ -1,0 +1,10 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.nav-all {
+  height: 90px;
+  background-color: rgb(220, 220, 220);
+  border-bottom: 2px solid rgb(154, 150, 150);
+}

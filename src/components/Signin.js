@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import img from "./image/logo_nobackground.png";
+import img from "./image/Gahan_Academy 1.png";
 import "../App.css";
 
 function Signin() {
@@ -26,7 +26,7 @@ function Signin() {
         }
         if (res.data.code === 200) {
           // move to home
-          navigate("/");
+          navigate("/home");
           localStorage.setItem("TOKEN", res.data.token);
           localStorage.setItem("EMAIL", res.data.email);
 
@@ -40,12 +40,13 @@ function Signin() {
   return (
     <>
       <div className="logo center">
-        <img src={img} alt="gahan-ai_logo" />
+        <Link to='/'><img src={img} alt="gahan-ai_logo" /></Link>
       </div>
 
       <h1 className="center">SIGNIN</h1>
       <div className="outcard">
         Email
+        <br />
         <input
           onChange={(e) => {
             setEmail(e.target.value);

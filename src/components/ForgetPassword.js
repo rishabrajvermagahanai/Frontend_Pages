@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import img from "./image/logo_nobackground.png";
+import { useNavigate, Link } from "react-router-dom";
+import img from "./image/Gahan_Academy 1.png";
 import "../App.css";
 
 function ForgetPassword() {
@@ -30,7 +30,9 @@ function ForgetPassword() {
   return (
     <>
       <div className="logo center">
-        <img src={img} alt="gahan-ai_logo" />
+        <Link to="/">
+          <img src={img} alt="gahan-ai_logo" />
+        </Link>
       </div>
 
       <h1 className="center"> Forget Password</h1>

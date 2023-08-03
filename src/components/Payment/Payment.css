@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Trirong");
 
+
 .row {
   display: flex;
   justify-content: space-around;
@@ -8,10 +9,14 @@
 .card {
   margin: 8vh;
   margin-bottom: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e1e1e1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #e1e1e1;
+  border-radius: 3%;
+  height: 80%;
 }
-
+.card:hover{
+  box-shadow: 0 10px 12px rgba(242, 137, 8, 0.6);
+}
 .card-text {
   font-family: "Trirong", serif;
 }
@@ -34,6 +39,9 @@
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .price sub.currency {
@@ -60,7 +68,35 @@
   text-decoration: none;
   margin-right: 10px;
 }
-
+.btndiv{
+  background-color: rgb(246, 220, 142);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
 .btn-primary:hover {
   background-color: #0056b3;
 }
+
+
+@media (max-width: 767px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .col-sm-6 {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+
+/* vehicle css */
+
+

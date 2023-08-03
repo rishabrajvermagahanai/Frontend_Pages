@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import img from "./image/logo_nobackground.png";
+import img from "./image/Gahan_Academy 1.png";
 import "../App.css";
 
 function Signup() {
@@ -34,7 +34,9 @@ function Signup() {
   return (
     <>
       <div className="logo center">
-        <img src={img} alt="gahan-ai_logo" />
+        <Link to="/">
+          <img src={img} alt="gahan-ai_logo" />
+        </Link>
       </div>
 
       <h1 className="center"> SIGNUP</h1>

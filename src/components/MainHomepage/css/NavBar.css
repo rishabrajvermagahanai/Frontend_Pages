@@ -1,0 +1,101 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img{
+ margin-left: 4rem;
+ height: 90px;
+} 
+.navbar{
+  height: 80px;
+  background-color: rgb(220,220,220);
+  border-bottom: 2px solid rgb(154, 150, 150);
+}
+.navbar-nav{
+  font-weight: 700;
+  font-size: larger;
+}
+.nav-item>a{
+  color: rgb(98,0,0);
+}
+#navbarNav{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+#navbarNav li{
+  margin-right: 3rem;
+}
+
+
+/* Reset link styles */
+li {
+  text-decoration: none;
+  position: relative;
+  color: #141313; /* Link text color */
+}
+
+/* Pseudo-element for the animated line */
+li::after {
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: rgb(254, 160, 8); /* Line color */
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s; /* Animation duration */
+}
+
+/* Hover effect */
+li:hover::after {
+  width: 100%;
+}
+
+.container{
+ margin-top: 150px;
+ width: 100%;
+ height: 50rem;
+}
+
+
+.img_ele img {
+  height: 310px;
+  width: 500px;
+  border-radius: 5%;
+  transition: transform 0.3s ease-in-out; /* Transition property for the animation */
+}
+
+.img_ele:hover{
+  border-radius: 5%;
+  transform: scale(1.1); /* Adjust the scale factor as needed */
+}
+
+/* Reset link styles */
+ul>li>a {
+  text-decoration: none;
+  position: relative;
+  color: #333; /* Link text color */
+}
+
+/* Pseudo-element for the animated line */
+ul>li>a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #f00; /* Line color */
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s; /* Animation duration */
+}
+
+/* Hover effect */
+ul>li>a:hover::after {
+  width: 100%;
+}
+
+
+
