@@ -1,5 +1,4 @@
 import React from "react";
-import "./Payment.css";
 import axios from "axios";
 import Frontend from "./Frontend";
 

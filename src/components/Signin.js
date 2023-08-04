@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import img from "./image/Gahan_Academy 1.png";
-import "../App.css";
+import "./Components.css";
 
 function Signin() {
   const navigate = useNavigate();
@@ -16,8 +16,6 @@ function Signin() {
         password: password,
       })
       .then((res) => {
-        //console.log(res.data);
-
         if (res.data.code === 500) {
           alert("User Not Found");
         }
@@ -29,7 +27,6 @@ function Signin() {
           navigate("/home");
           localStorage.setItem("TOKEN", res.data.token);
           localStorage.setItem("EMAIL", res.data.email);
-
         }
       })
       .catch((err) => {
@@ -39,12 +36,14 @@ function Signin() {
 
   return (
     <>
-      <div className="logo center">
-        <Link to='/'><img src={img} alt="gahan-ai_logo" /></Link>
-      </div>
+       <div className="card-home">
+        <Link to="/">
+          <img src={img} alt="gahan-ai_logo" className="logo"/>
+        </Link>
+        </div>
 
-      <h1 className="center">SIGNIN</h1>
       <div className="outcard">
+      <h1 className="center">SIGNIN</h1>
         Email
         <br />
         <input
@@ -56,7 +55,7 @@ function Signin() {
           type="email"
         />{" "}
         <br /> <br />
-        Password
+        Enter Your Password
         <input
           onChange={(e) => {
             setPassword(e.target.value);
@@ -71,14 +70,26 @@ function Signin() {
           SUBMIT{" "}
         </button>
         <Link
-          style={{ textAlign: "center", display: "block", marginTop: "5px" }}
+          style={{
+            textAlign: "center",
+            display: "block",
+            marginTop: "5px",
+            fontSize: "20px",
+            fontWeight: "bold",
+          }}
           to={"/signup"}
         >
           {" "}
           SIGN UP{" "}
         </Link>
         <Link
-          style={{ textAlign: "center", display: "block", marginTop: "5px" }}
+          style={{
+            textAlign: "center",
+            display: "block",
+            marginTop: "5px",
+            fontSize: "20px",
+            fontWeight: "bold",
+          }}
           to={"/forget-pass"}
         >
           {" "}

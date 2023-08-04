@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import img from "./image/Gahan_Academy 1.png";
+import "./Components.css";
 
 function NewSubmit() {
   const navigate = useNavigate();
@@ -31,15 +32,14 @@ function NewSubmit() {
 
   return (
     <>
-      <div className="logo center">
+      <div className="card-home">
         <Link to="/">
-          <img src={img} alt="gahan-ai_logo" />
+          <img src={img} alt="gahan-ai_logo" className="logo" />
         </Link>
       </div>
 
-      <h1 className="center"> FORGET PASSWORD </h1>
-
       <div className="outcard">
+        <h1 className="center"> FORGET PASSWORD </h1>
         OTP
         <input
           style={{ marginBottom: "15px" }}

@@ -2,10 +2,8 @@
   padding: 25px;
   margin-left: 22%;
   width: 50%;
-  
   border-radius: 5px;
   border: 3px solid blueviolet;
-
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 10px 8px 16px rgba(182, 104, 104, 0.2);
@@ -23,6 +21,7 @@
   padding: 10px 10px;
 }
 
+
 .btns {
   background-color: #0050b1;
   color: #fff;
@@ -37,9 +36,15 @@
   transform: translateY(2px);
 }
 
-.logo,.center{
-  display: flex;
-  justify-content: center;
+
+a{
+  height: 100px;
+  width: 100px;
+}
+.logo{
+  height: 100%;
+  width: 100%;
+  margin-left: 0%;
 }
 .card-home{
   background-color: rgb(220,220,220);
@@ -47,22 +52,21 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 20px;
 }
 .logout>span{
   color: rgb(166, 5, 5);
 }
-
-
-@media (max-width: 767px) {
-  .card {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
+@media (max-width: 767px){
+  .card-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+  .logout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
-
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
-

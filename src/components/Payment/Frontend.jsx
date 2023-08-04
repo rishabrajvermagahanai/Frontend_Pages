@@ -1,5 +1,5 @@
 import React from "react";
-import "./Payment.css";
+import "./Frontend.css";
 
 const Frontend = (data) => {
   return (
