@@ -7,31 +7,51 @@ import "./Components.css";
 function ForgetPassword() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
+  const [errors, setErrors] = useState({});
 
-  const handleSubmit = () => {
-    console.log(email);
-    axios
-      .post("http://localhost:5000/send-otp", {
-        email: email,
-      })
-      .then((res) => {
-        console.log(res.data);
-        if (res.data.code === 200) {
-          navigate("/otp");
-        } else {
-          alert("Email / Server Error.");
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  const validateForm = () => {
+    let newErrors = {};
+
+    if (!email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "Invalid email address";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      console.log(email);
+      axios
+        .post("http://localhost:5000/send-otp", {
+          email: email,
+        })
+        .then((res) => {
+          
+          if (res.data.code === 200) {
+            navigate("/otp");
+          }
+          else if (res.data.code === 404) {
+            alert("Email is not registerd");
+          } else {
+            alert("Email / Server Error.");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   };
 
   return (
     <>
       <div className="card-home">
         <Link to="/">
-          <img src={img} alt="gahan-ai_logo" className="logo"/>
+          <img src={img} alt="gahan-ai_logo" className="logo" />
         </Link>
       </div>
       <div className="outcard">
@@ -44,7 +64,8 @@ function ForgetPassword() {
           }}
           className="inputs"
           type="text"
-        />{" "}
+        /> {errors.email && <div className="error">{errors.email}</div>}
+        {" "}
         <br /> <br />
         <button onClick={handleSubmit} className="btns">
           SEND OTP{" "}

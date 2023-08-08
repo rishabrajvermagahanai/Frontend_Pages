@@ -20,8 +20,11 @@ const Payment = ({ amount }) => {
       handler: function (response) {
         axios
           .post("http://localhost:5000/verify", { response: response })
-          .then((res) => {  
-            console.log("order created succesfully");
+          .then((res) => {
+            if(res.data.code===200)
+            {
+              console.log("payment done")
+            }  
           })
           .catch((err) => {
             console.log("error :" + err);
@@ -36,7 +39,7 @@ const Payment = ({ amount }) => {
   }
 
   const handlePayment = (amount) => {
-    const _data = { amount: amount, email: email };
+    const _data = { amount: amount, email: email};
     axios
       .post("http://www.localhost:5000/orders", _data)
       .then((res) => {

@@ -1,15 +1,16 @@
 import { useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import img from "./image/Gahan_Academy 1.png";
 import "./Components.css";
 
 function Signup() {
-  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
+  const [signup, setSignup]=useState("");
   const [errors, setErrors] = useState({});
 
   const validateForm = () => {
@@ -56,12 +57,11 @@ function Signup() {
         .then((res) => {
           console.log(res.data);
           if (res.data.code === 200) {
-            //alert("Signup success.");
             setEmail("");
             setPassword("");
             setName("");
             setMobile("");
-            navigate("/signin");
+            setSignup("Please check your mail for verification...")
           } else {
             alert("Error.");
             setEmail("");
@@ -83,6 +83,7 @@ function Signup() {
       </div>
 
       <div className="outcard">
+      {<h3 className="signup">{signup}</h3>}
       <h1 className="center">SIGNUP</h1>
         Name <br />
         <input
@@ -114,8 +115,9 @@ function Signup() {
           value={password}
           className={`inputs ${errors.password ? "is-invalid" : ""}`}
           type="password"
-        /><br></br><br></br>
+        /><br></br>
         {errors.password && <div className="error">{errors.password}</div>}
+        <br></br>
         <button onClick={handleSubmit} className="btns">
           SUBMIT
         </button>

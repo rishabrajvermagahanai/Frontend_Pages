@@ -1,7 +1,17 @@
 import React from "react";
+import { useState } from "react";
 import "./Frontend.css";
 
 const Frontend = (data) => {
+  const [clicked, setClicked] = useState(false);
+
+  const handleButtonClick = () => {
+    setClicked(true);
+    setTimeout(() => {
+      setClicked(false);
+    }, 1000);
+  };
+
   return (
     <>
       <div class="row">
@@ -73,7 +83,10 @@ const Frontend = (data) => {
                 Annotation Pipelines ,Adaptive Cruise Control
               </p>
               <div className="btndiv">
-                <button class="btn btn-primary">Buy Course</button>
+                <button className={`btn-primary ${clicked ? "clicked" : ""}`}
+                  onClick={handleButtonClick}>
+                  {clicked ? "Not Avilable" : "Buy Course"}
+                </button>
               </div>
             </div>
           </div>

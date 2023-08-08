@@ -7,7 +7,6 @@
 }
 .card {
   height: 100%;
-  background-color: #007bff                   ;
   margin: 8vh;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border: 2px solid #e1e1e1;
@@ -97,4 +96,16 @@
     width: 100%;
     margin-bottom: 10px;
   }
+}
+
+
+.btn-primary {
+  border: none;
+  cursor: pointer;
+  transition: transform 0.9s;
+}
+
+.clicked {
+  background-color: #ec4811;
+  transform: scale(1.1);
 }

@@ -1,11 +1,11 @@
 import React from "react";
-import "./css/NavBar.css";
+import "./css/HomeNavBar.css";
 import img from "../image/Gahan_Academy 1.png";
 import { Link } from "react-router-dom";
 import img_ele_1 from '../image/imageone.jpg'
 import img_ele_2 from '../image/imagetwo.jpg'
 
-const NavBar = () => {
+const HomeNavBar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light custom-navbar fixed-top">
@@ -63,8 +63,12 @@ const NavBar = () => {
           </div>
         </div>
       </div>
+
+
+
+
     </>
   );
 };
 
-export default NavBar;
+export default HomeNavBar;

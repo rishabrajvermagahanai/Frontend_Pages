@@ -1,7 +1,7 @@
 
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./components/MainHomepage/NavBar";
+import HomeNavBar from "./components/MainHomepage/HomeNavBar";
 import Signup from "./components/Signup";
 import Signin from "./components/Signin";
 import Home from "./components/Home";
@@ -18,7 +18,7 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<NavBar />} />
+          <Route path="/" element={<HomeNavBar />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/home" element={<Home />} />

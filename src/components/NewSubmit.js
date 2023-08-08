@@ -50,7 +50,7 @@ function NewSubmit() {
           className="inputs"
           type="text"
         />
-        New Password
+        Enter New Password
         <input
           style={{ marginBottom: "20px" }}
           value={password}
@@ -64,6 +64,19 @@ function NewSubmit() {
           {" "}
           CHANGE PASSWORD{" "}
         </button>
+        <Link
+          style={{
+            textAlign: "center",
+            display: "block",
+            marginTop: "5px",
+            fontSize: "20px",
+            fontWeight: "bold",
+          }}
+          to={"/signup"}
+        >
+          {" "}
+          SIGN UP{" "}
+        </Link>
       </div>
     </>
   );

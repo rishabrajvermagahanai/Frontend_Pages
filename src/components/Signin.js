@@ -27,6 +27,7 @@ function Signin() {
           navigate("/home");
           localStorage.setItem("TOKEN", res.data.token);
           localStorage.setItem("EMAIL", res.data.email);
+          localStorage.setItem("NAME", res.data.name);
         }
       })
       .catch((err) => {

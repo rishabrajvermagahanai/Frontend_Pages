@@ -1,5 +1,5 @@
 .outcard {
-    padding: 5px;
+    padding: 20px;
     margin-left: 22%;
     margin-top: 2%;
     width: 50%;
@@ -53,6 +53,7 @@
     margin-left: 0px;
   }
   .card-home{
+    box-shadow: 10px 8px 16px rgba(143, 42, 42, 0.4);
     background-color: rgb(220,220,220);
     width: 100%;
     display: flex;
@@ -84,4 +85,7 @@
     font-size: 14px;
     margin-top: 5px;
     font-weight: bold;
+  }
+  .signup{
+    color: green;
   }
