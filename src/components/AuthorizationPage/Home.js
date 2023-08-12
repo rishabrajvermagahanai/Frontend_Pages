@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import Payment from "./Payment/Payment";
-import img from "./image/Gahan_Academy 1.png";
-import "./Components.css";
+import Payment from "../Payment/Payment";
+import img from "../image/Gahan_Academy 1.png";
+import "./Authorization.css";
 
 function Home() {
   const navigate = useNavigate();
@@ -16,13 +16,12 @@ function Home() {
 
   return (
     <>
-      <div className="card-home">
-        <Link to="/">
-          <img src={img} alt="gahan-ai_logo" className="logo" />
-        </Link>
-
-        <div className="logout">
-          <span>Welcome :-{localStorage.getItem("NAME")} </span><br></br>
+        <div className="logout card-home">
+          <Link to="/">
+            <img src={img} alt="gahan-ai_logo" className="logo" />
+          </Link>
+          <span>Welcome :-<h2>{localStorage.getItem("NAME")}</h2> </span>
+          <br></br>
           <span>YOUR EMAIL :-{localStorage.getItem("EMAIL")} </span>
           <br />{" "}
           <button
@@ -36,7 +35,6 @@ function Home() {
             LOGOUT{" "}
           </button>
         </div>
-      </div>
       <Payment amount={35000} />
     </>
   );

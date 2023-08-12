@@ -1,8 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-import img from "./image/Gahan_Academy 1.png";
-import "./Components.css";
+import NavBar from "../NavBar";
+import "./Authorization.css";
 
 function ForgetPassword() {
   const navigate = useNavigate();
@@ -31,11 +31,9 @@ function ForgetPassword() {
           email: email,
         })
         .then((res) => {
-          
           if (res.data.code === 200) {
             navigate("/otp");
-          }
-          else if (res.data.code === 404) {
+          } else if (res.data.code === 404) {
             alert("Email is not registerd");
           } else {
             alert("Email / Server Error.");
@@ -49,11 +47,7 @@ function ForgetPassword() {
 
   return (
     <>
-      <div className="card-home">
-        <Link to="/">
-          <img src={img} alt="gahan-ai_logo" className="logo" />
-        </Link>
-      </div>
+      <NavBar />
       <div className="outcard">
         <h1 className="center"> Forget Password</h1>
         Email <br />
@@ -64,9 +58,9 @@ function ForgetPassword() {
           }}
           className="inputs"
           type="text"
-        /> {errors.email && <div className="error">{errors.email}</div>}
-        {" "}
-        <br /> <br />
+        />{" "}
+        {errors.email && <div className="error">{errors.email}</div>} <br />{" "}
+        <br />
         <button onClick={handleSubmit} className="btns">
           SEND OTP{" "}
         </button>

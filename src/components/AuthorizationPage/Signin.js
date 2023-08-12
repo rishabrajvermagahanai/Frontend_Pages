@@ -1,8 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import img from "./image/Gahan_Academy 1.png";
-import "./Components.css";
+import NavBar from "../NavBar";
+import "./Authorization.css";
 
 function Signin() {
   const navigate = useNavigate();
@@ -37,14 +37,9 @@ function Signin() {
 
   return (
     <>
-       <div className="card-home">
-        <Link to="/">
-          <img src={img} alt="gahan-ai_logo" className="logo"/>
-        </Link>
-        </div>
-
+      <NavBar />
       <div className="outcard">
-      <h1 className="center">SIGNIN</h1>
+        <h1 className="center">SIGNIN</h1>
         Email
         <br />
         <input

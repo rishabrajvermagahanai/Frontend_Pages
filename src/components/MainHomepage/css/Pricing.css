@@ -3,8 +3,12 @@
   margin: 0px;
   box-sizing: border-box;
 }
-.nav-all {
-  height: 90px;
-  background-color: rgb(220, 220, 220);
-  border-bottom: 2px solid rgb(154, 150, 150);
+
+
+.pricing{
+  margin: 8vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #e1e1e1;
+  border-radius: 3%;                                
+  height: 80%;
 }

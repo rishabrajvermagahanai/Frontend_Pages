@@ -1,0 +1,63 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* Custom CSS */
+
+.card-img-top,
+.img-fluid {
+  margin-left: 0;
+}
+.content_1{
+  margin-top: 1%;
+  padding-top: 4%;
+  background-color: rgb(209, 205, 197);
+  border-radius: 1%;
+  height: max-content;
+}
+.card{
+  border-radius: 5%;
+  transition: transform 0.3s ease-in-out;
+}
+.card:hover{
+  border-radius: 5%;
+  transform: scale(1.1);
+}
+
+.rights {
+  height: 20rem;
+  background-color: bisque;
+}
+
+.course{
+  background-color: rgb(197, 206, 206);
+  border-radius: 5%;
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+
+ .row{
+  display: flex;
+  flex-direction: row;
+ }
+
+ 
+}
+@media(max-width: 768px){
+
+  .gallery{
+    margin-bottom: 0%;
+    height: 15rem;
+  }
+ .image{
+  height: fit-content;
+ }
+  .number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+}

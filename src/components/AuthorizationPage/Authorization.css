@@ -44,14 +44,7 @@
   .btns:active {
     transform: translateY(2px);
   }
-  
-  
- 
-  .logo{
-    height: 100px;
-    width: 100px;
-    margin-left: 0px;
-  }
+
   .card-home{
     box-shadow: 10px 8px 16px rgba(143, 42, 42, 0.4);
     background-color: rgb(220,220,220);
