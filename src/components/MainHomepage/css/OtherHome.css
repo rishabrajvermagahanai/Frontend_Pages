@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-/* Custom CSS */
 
 .card-img-top,
 .img-fluid {
@@ -43,7 +42,6 @@
   flex-direction: row;
  }
 
- 
 }
 @media(max-width: 768px){
 

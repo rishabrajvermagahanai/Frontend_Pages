@@ -76,6 +76,7 @@ function Signup() {
   return (
     <>
       <NavBar />
+      <div className="start bg-black" style={{height:"90px"}}>welcome</div>
       <div className="outcard">
         {<h3 className="signup">{signup}</h3>}
         <h1 className="center">SIGNUP</h1>

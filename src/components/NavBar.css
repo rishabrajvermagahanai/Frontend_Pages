@@ -22,7 +22,7 @@ header {
     border-bottom: 2px solid rgb(154, 150, 150);
 	color: black;
 	position: fixed;
-	top: 5%;
+	top: 0;
 	z-index: 5;
 }
 
@@ -75,7 +75,9 @@ nav {
 		align-items: center;
 		justify-content: center;
 		gap: 1.5rem;
-		background-color: rgb(209, 28, 28);
+		background-color: rgb(208, 206, 206);
+		border: 5px solid slategrey;
+		border-radius: 35px;
 		transition: 1s;
 	}
 

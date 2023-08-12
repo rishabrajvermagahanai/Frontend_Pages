@@ -48,6 +48,7 @@ function ForgetPassword() {
   return (
     <>
       <NavBar />
+      <div className="start bg-black" style={{height:"90px"}}>welcome</div>
       <div className="outcard">
         <h1 className="center"> Forget Password</h1>
         Email <br />

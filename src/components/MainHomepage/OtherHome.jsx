@@ -13,11 +13,12 @@ const MainHome = () => {
   const [counterOn, setCounterOn] = useState(false);
   return (
     <>
-      <NavBar />
-      <div className="container content_1">
+      <NavBar />--
+      <div className="start bg-black" style={{height:"90px"}}>welcome</div>
+      <div className="container content_1 p-0">
         <div className="row p-0">
           <div className="col-md-6 col-12 card_1">
-            <div className="card p-1 m-1">
+            <div className="card">
               <img
                 src="https://gahanacademy.gahanai.co.in/assets/images/landing_pg_imgs/adas.jpg"
                 className="img-fluid card-img-top"
@@ -29,7 +30,7 @@ const MainHome = () => {
           </div>
 
           <div className="col-md-6 col-12 card_1">
-            <div className="card p-1 m-1">
+            <div className="card">
               <img
                 src="https://gahanacademy.gahanai.co.in/assets/images/landing_pg_imgs/svd_img.jpg"
                 className="img-fluid card-img-top"
@@ -57,12 +58,10 @@ const MainHome = () => {
             <div class="carousel-item">
               <img src={img_ele_1} className="d-block moving-img" alt="..." />
             </div>
-            {/* Carousel items */}
           </div>
         </div>
-
-        {/* Rest of the content */}
       </div>
+
       <ScrollTrigger
         onEnter={() => setCounterOn(true)}
         onExit={() => setCounterOn(false)}

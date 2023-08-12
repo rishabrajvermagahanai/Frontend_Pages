@@ -33,6 +33,7 @@ function NewSubmit() {
   return (
     <>
       <NavBar />
+      <div className="start bg-black" style={{height:"90px"}}>welcome</div>
       <div className="outcard">
         <h1 className="center"> FORGET PASSWORD </h1>
         OTP
